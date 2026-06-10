@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ekagrah Foundation Website
 
-## Getting Started
+![Live Status](https://img.shields.io/badge/Status-Live-success.svg)
+![Tech Stack](https://img.shields.io/badge/Stack-Next.js%20%7C%20Tailwind%20%7C%20Framer%20Motion-blue.svg)
 
-First, run the development server:
+Welcome to the official repository for the **Ekagrah Foundation** website. This is a modern, fast, and fully responsive web application designed with a bold "brutalist" aesthetic to showcase the foundation's core programs, share real-world impact stories, and seamlessly accept donations.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+🌐 **Live URL:** [https://ekagrah-foundation.web.app](https://ekagrah-foundation.web.app)
+
+---
+
+## 🚀 Key Features
+
+* **Bold & Elegant Design:** Built with a clean, brutalist-inspired UI, utilizing smooth micro-interactions.
+* **Animated UI:** Rich, scroll-driven animations powered by Framer Motion.
+* **Impact & Programs Showcases:** Dedicated dynamically routed pages (`/impact/[slug]`, `/programs/[slug]`) to deeply explore the foundation's work.
+* **Smart Donation Flow:** Pre-fills donation context based on the program users navigate from (e.g., `?type=education`).
+* **Static Export:** Fully optimized for static hosting via Firebase.
+
+## 🛠️ Tech Stack
+
+* **Framework:** [Next.js](https://nextjs.org/) 16 (App Router)
+* **Language:** TypeScript
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **Animations:** [Framer Motion](https://www.framer.com/motion/)
+* **Hosting:** [Firebase Hosting](https://firebase.google.com/docs/hosting)
+
+---
+
+## 💻 Local Development
+
+Follow these steps to run the application locally on your machine.
+
+### Prerequisites
+
+* Node.js 18.x or later installed.
+* npm or yarn package manager.
+
+### Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Shaurya8008/Ekagrah-website.git
+   cd Ekagrah-website/ekagrah-foundation
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server:**
+   ```bash
+   npm run dev
+   ```
+
+4. **View the application:**
+   Open [http://localhost:3000](http://localhost:3000) in your web browser.
+
+---
+
+## 📂 Project Structure
+
+```text
+ekagrah-foundation/
+├── src/
+│   ├── app/           # Next.js App Router pages & API routes
+│   ├── components/    # Reusable UI elements (Buttons, Cards, Animations)
+│   ├── data/          # Mock database / Static JSON records (Programs, Stories)
+│   ├── hooks/         # Custom React hooks (e.g., useCountUp, useInView)
+│   ├── lib/           # Utilities and configuration (e.g., Firebase, Utils)
+│   └── types/         # Global TypeScript definitions
+├── public/            # Static assets (Images, SVG icons)
+├── firebase.json      # Firebase Hosting configuration
+└── next.config.ts     # Next.js configuration (set to output: 'export')
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚢 Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured to be statically exported and hosted on Firebase Hosting.
 
-## Learn More
+1. **Build the application:**
+   ```bash
+   npm run build
+   ```
+   *This generates an optimized static bundle in the `out/` directory.*
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+2. **Deploy to Firebase:**
+   ```bash
+   npx firebase-tools deploy --only hosting
+   ```
+   *(Ensure you are logged in using `npx firebase-tools login` and have an active project selected via `npx firebase-tools use` before deploying).*
