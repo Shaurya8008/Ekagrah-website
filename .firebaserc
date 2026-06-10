@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "npx firebase-tools deploy --only hosting": "ekagrah-foundation"
+  },
+  "targets": {},
+  "etags": {}
+}
