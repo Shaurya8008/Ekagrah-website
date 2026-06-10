@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ekagrah Seva Foundation | Empowering Communities</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#e11d48",
+                    "outline-variant": "#e5bdbe",
+                    "on-secondary-container": "#730425",
+                    "inverse-surface": "#670024",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#ffced4",
+                    "on-primary-container": "#fffaf9",
+                    "inverse-on-surface": "#ffecee",
+                    "on-secondary-fixed-variant": "#891933",
+                    "error": "#ba1a1a",
+                    "background-wash": "#FFF1F2",
+                    "on-primary-fixed": "#40000c",
+                    "on-surface-variant": "#5c3f40",
+                    "on-tertiary": "#ffffff",
+                    "surface-muted": "#F0ECF2",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container": "#ffe9ea",
+                    "secondary-fixed": "#ffdadc",
+                    "on-primary-fixed-variant": "#920028",
+                    "secondary-container": "#fe7488",
+                    "surface-bright": "#fff8f7",
+                    "surface": "#fff8f7",
+                    "secondary": "#a93349",
+                    "on-tertiary-fixed-variant": "#003ea8",
+                    "on-surface": "#400014",
+                    "on-tertiary-container": "#fdfaff",
+                    "on-secondary-fixed": "#400010",
+                    "tertiary": "#0050d4",
+                    "surface-container-low": "#fff0f1",
+                    "on-primary": "#ffffff",
+                    "primary": "#b80035",
+                    "muted-text": "#666666",
+                    "surface-variant": "#ffd9dd",
+                    "on-secondary": "#ffffff",
+                    "testimonial-bg": "#F5F5F5",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#ffd9dd",
+                    "on-background": "#400014",
+                    "border-subtle": "#FECDD3",
+                    "surface-container-high": "#ffe1e4",
+                    "background": "#fff8f7",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "primary-fixed": "#ffdada",
+                    "tertiary-fixed": "#dbe1ff",
+                    "secondary-fixed-dim": "#ffb2b9",
+                    "outline": "#906f70",
+                    "on-tertiary-fixed": "#00174b",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#2f6af2",
+                    "primary-fixed-dim": "#ffb3b6",
+                    "inverse-primary": "#ffb3b6",
+                    "surface-tint": "#be0037"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "1rem",
+                    "container-max": "1280px",
+                    "section-gap-sm": "4rem",
+                    "section-gap-lg": "8rem",
+                    "gutter": "1.5rem",
+                    "stack-lg": "2rem"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Lexend"],
+                    "testimonial-quote": ["Source Sans 3"],
+                    "body-md": ["Source Sans 3"],
+                    "body-lg": ["Source Sans 3"],
+                    "headline-md": ["Lexend"],
+                    "display-lg-mobile": ["Lexend"],
+                    "label-bold": ["Lexend"],
+                    "display-lg": ["Lexend"],
+                    "body-sm": ["Source Sans 3"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "testimonial-quote": ["20px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-scale:active {
+            transform: scale(0.95);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Section 1: Sticky TopAppBar -->
+<header class="fixed top-0 left-0 w-full bg-surface/95 dark:bg-surface-dim/95 backdrop-blur-md border-b border-border-subtle dark:border-outline-variant shadow-sm z-50">
+<nav class="flex items-center justify-between px-gutter py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="volunteer_activism">volunteer_activism</span>
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed">Ekagrah Seva</span>
+</div>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-bold active-scale transition-transform">
+                Donate Now
+            </button>
+</nav>
+</header>
+<main class="pt-16">
+<!-- Section 2: Hero Section -->
+<section class="relative min-h-[707px] flex flex-col justify-center px-gutter py-section-gap-sm bg-primary-container overflow-hidden">
+
+<div class="relative z-10 max-w-container-max mx-auto w-full">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-primary-container mb-stack-md leading-tight">
+                    Empowering Communities Together
+                </h1>
+<p class="font-body-lg text-body-lg text-on-primary-container/90 mb-stack-lg max-w-md">
+                    Dedicated to bridging the gap for the underserved through sustainable development, education, and immediate relief programs across the nation.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-lg font-label-bold text-lg active-scale transition-all shadow-md hover:brightness-110">
+                        Start Today
+                    </button>
+<button class="border-2 border-on-primary-container text-on-primary-container px-8 py-4 rounded-lg font-label-bold text-lg active-scale transition-all hover:bg-on-primary-container/10">
+                        Our Impact
+                    </button>
+</div>
+</div>
+<div class="absolute bottom-[-10%] right-[-10%] w-64 h-64 bg-surface-variant/20 rounded-full blur-3xl"></div>
+</section>
+<!-- Section 3: Problem Statement -->
+<section class="px-gutter py-section-gap-sm bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="inline-block px-3 py-1 bg-surface-container rounded-full text-primary font-label-bold text-xs uppercase tracking-wider mb-stack-md">
+                    The Challenge
+                </div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-stack-lg">Addressing the Roots of Inequality</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-lg">
+<div class="flex flex-col gap-4 p-6 bg-background border border-border-subtle rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="broken_image">broken_image</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Systemic Poverty</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Millions remain trapped in cycles of generational poverty, lacking access to basic nutrition and stable housing essentials required for human dignity.
+                        </p>
+</div>
+<div class="flex flex-col gap-4 p-6 bg-background border border-border-subtle rounded-xl">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="school">school</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Education Gaps</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Over 40% of children in remote areas drop out before high school due to a lack of resources, limiting their future economic potential.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Solution Overview (Bento-style Grid) -->
+<section class="px-gutter py-section-gap-sm bg-background-wash">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-stack-lg">Our Strategic Programs</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md:col-span-2 bg-white p-8 rounded-2xl border border-border-subtle shadow-sm flex flex-col justify-between">
+<div>
+<div class="w-12 h-12 bg-primary/10 flex items-center justify-center rounded-lg mb-4">
+<span class="material-symbols-outlined text-primary" data-icon="health_and_safety">health_and_safety</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Seva Health Initiative</h3>
+<p class="font-body-md text-on-surface-variant mb-6">Mobile clinics providing free medical checkups and essential medicine to over 50 villages weekly.</p>
+</div>
+<img alt="Healthcare support" class="rounded-xl w-full h-48 object-cover" data-alt="A professional medical setting in a rural community where a kind healthcare worker in a white coat is providing a checkup to an elderly woman. The scene is bright, airy, and evokes a sense of trust and care, using the foundation's primary rose and white color palette. The lighting is natural and soft, creating a warm, hopeful atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgKsqzUsalM-XDS4O3-DQ-3ToqjpICIzYAbzt7IPljs_NtcGYYeb-Bq70nJ8_sXJtcLSejToNCPeADRDsXjH7ugK0mDzDttZ6VJJdJUnZvJowsM-8Yna9VU-2Lhs72hHAs5OOIXMMvwnupru4wibvjt0xIqDpSDbgwEXD4GswNoDZd5kkLHNoxMKvpZ8tJr6cSV6XJ5Kr7Jo_5fNP6_iLvlzyTbGvJq4f4sMXcTLI6QR9wuGjF4J_BMYupkJDlVwt_MJcpAuBBaXIu"/>
+</div>
+<div class="bg-white p-8 rounded-2xl border border-border-subtle shadow-sm flex flex-col">
+<div class="w-12 h-12 bg-tertiary/10 flex items-center justify-center rounded-lg mb-4">
+<span class="material-symbols-outlined text-tertiary" data-icon="lightbulb">lightbulb</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-2">Skill Up</h3>
+<p class="font-body-md text-on-surface-variant">Vocational training programs focusing on digital literacy and craftsmanship to enable financial independence.</p>
+<div class="mt-auto pt-8">
+<div class="flex -space-x-2">
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-dim"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-primary-fixed"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-tertiary-fixed"></div>
+<div class="w-10 h-10 rounded-full border-2 border-white bg-surface-variant flex items-center justify-center text-[10px] font-bold">+2k</div>
+</div>
+<p class="text-xs font-label-bold text-on-surface-variant mt-2">Lives Transformed</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: Testimonials Carousel -->
+<section class="bg-testimonial-bg py-section-gap-sm px-gutter overflow-hidden">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-lg text-headline-lg text-center mb-stack-lg">Voices of Impact</h2>
+<div class="flex gap-6 overflow-x-auto hide-scrollbar snap-x pb-8">
+<!-- Card 1 -->
+<div class="min-w-[85%] md:min-w-[400px] snap-center bg-white p-8 rounded-2xl border border-border-subtle flex flex-col gap-4">
+<p class="font-testimonial-quote text-testimonial-quote italic text-on-surface-variant">
+                            "Ekagrah Seva didn't just give us food; they gave us the tools to rebuild our entire village after the floods. I am forever grateful."
+                        </p>
+<div class="flex items-center gap-4 mt-4">
+<img alt="Rajesh" class="w-12 h-12 rounded-full object-cover" data-alt="A portrait of a middle-aged South Asian man with a warm, genuine smile. He is standing outdoors in a sunlit village setting, wearing a simple, clean shirt. The background is slightly blurred to keep focus on his expressive, grateful face. The overall aesthetic is professional, authentic, and emotionally resonant with high-key lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUb2Vkn9SRAYF5LBVy2JBFNFFbFupazx-J-3dac9USs9fiTwerYS0mQZnPhCT--HZ5YRSHb1G8nMbmAOxeKAVY9QrL9z7bpPo7sohKT1omKlZVk7f-h5M_AEowpQYlKzp3zPY59ftY_3qm-V4T3CEgHiEh0ez40Cq7hPPSWetLpPzRJM-HT-1phzuV5-_h8uitvehTnXHOHH9myBP8DePClalPXQVNGhvoVUnca6D3BhDxjTKVH69TwCeClfeESt0SBOaFVlnCN2DF"/>
+<div>
+<p class="font-label-bold text-on-surface">Rajesh Kumar</p>
+<p class="text-xs text-primary font-medium">Beneficiary</p>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="min-w-[85%] md:min-w-[400px] snap-center bg-white p-8 rounded-2xl border border-border-subtle flex flex-col gap-4">
+<p class="font-testimonial-quote text-testimonial-quote italic text-on-surface-variant">
+                            "Volunteering here opened my eyes to the power of collective action. Seeing the children's faces light up when they learn is everything."
+                        </p>
+<div class="flex items-center gap-4 mt-4">
+<img alt="Sarah" class="w-12 h-12 rounded-full object-cover" data-alt="A professional close-up of a young woman with a kind and determined expression. She is wearing a subtle volunteer badge or vest with a red accent color. The background is a brightly lit, modern community center. The lighting is clean and soft, emphasizing her bright eyes and positive energy, maintaining the modern light-mode theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuJoBnXC7UknuuNYGuSrX7VpYeu56ZL_jvRQcNl0Pp1iWcDUXhOtcpotDanaqJy9qe8D2IKN-o0y1L9ATCbWmvc9vp2niBY0ngNHrOWhI6mDFMLnxB5sHUK6SsSNx_hXwmoed9B8PZZaVsN7m3whJW-1U79oLai39kVyZdKkqiCAcMjLfGw5rh-7zXzFyuyV6I1lBKhSRmJxMrmC6niEtok78JJ6zy-k3C5r3eirEJFV_yOoAzZYEA7EZKYRobpTxg4QtHY6QtCIV9"/>
+<div>
+<p class="font-label-bold text-on-surface">Sarah Mitchell</p>
+<p class="text-xs text-primary font-medium">Volunteer</p>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="min-w-[85%] md:min-w-[400px] snap-center bg-white p-8 rounded-2xl border border-border-subtle flex flex-col gap-4">
+<p class="font-testimonial-quote text-testimonial-quote italic text-on-surface-variant">
+                            "The transparency of this foundation is what keeps me contributing year after year. I know exactly where my money is going."
+                        </p>
+<div class="flex items-center gap-4 mt-4">
+<img alt="David" class="w-12 h-12 rounded-full object-cover" data-alt="A studio-quality portrait of a professional man in his 40s, conveying trust and reliability. He is wearing a smart casual outfit in neutral tones. The lighting is sophisticated and directional, creating depth while maintaining a high-key, corporate modern feel. The background is a clean, solid off-white with subtle rose-tinted shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWFIt6qxzNqWns_3AxGyDWky--MOkRAnkzuZiUY8QBIOYsnx_pj4DdKQ1FNJgsCMkqV6w51pJ89Twj2Zn8uN561xGAiZrFkQ0qMx3RDlVMkAIf2ZLyO4u5yp86TW1_eAZDgKLyxMSdSozI1kfjxNQ9LcdpBZ28aZlwe8BLGgYiE2Aojwg4d3xlPAP9u4biBOqAONbcuf6cEtjwJeAJyqeS1Uq3T_dxiprC1TV_pGUiF3WVdFIZeSilzzyzaZoHsVH31hiRqY_Xv0Hx"/>
+<div>
+<p class="font-label-bold text-on-surface">David Chen</p>
+<p class="text-xs text-primary font-medium">Donor</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Final CTA -->
+<section class="relative px-gutter py-section-gap-lg bg-surface text-center overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/10 to-tertiary/10 opacity-50"></div>
+<div class="relative z-10 max-w-2xl mx-auto">
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-stack-md text-on-surface">Change Starts With You</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">
+                    Join thousands of supporters who are making a real, measurable difference in the lives of those who need it most.
+                </p>
+<div class="flex flex-col items-center gap-6">
+<button class="w-full sm:w-auto bg-tertiary-container text-on-tertiary-container px-12 py-5 rounded-xl font-label-bold text-xl active-scale transition-all shadow-lg hover:shadow-xl hover:brightness-110">
+                        Join the Cause
+                    </button>
+<div class="flex items-center gap-2 text-on-surface-variant font-label-bold uppercase tracking-widest text-xs">
+<span class="w-8 h-[1px] bg-outline-variant"></span>
+                        Trusted by 50+ Partners
+                        <span class="w-8 h-[1px] bg-outline-variant"></span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Section 7: Footer -->
+<footer class="bg-on-surface dark:bg-inverse-surface text-surface-variant px-gutter py-stack-lg">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<div class="flex flex-col items-center md:items-start gap-2">
+<span class="font-headline-sm text-headline-sm text-primary-fixed">Ekagrah Seva</span>
+<p class="font-body-sm text-body-sm text-surface-variant/60">Restoring dignity, one community at a time.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-6">
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Impact</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Our Mission</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Transparency</a>
+<a class="font-body-sm text-body-sm text-surface-variant hover:text-primary-fixed-dim transition-colors" href="#">Contact Us</a>
+</nav>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center hover:bg-primary-fixed/20 transition-all" href="#">
+<span class="material-symbols-outlined text-primary-fixed text-xl" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-variant/10 flex items-center justify-center hover:bg-primary-fixed/20 transition-all" href="#">
+<span class="material-symbols-outlined text-primary-fixed text-xl" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-stack-lg pt-stack-md border-t border-surface-variant/10 text-center">
+<p class="font-body-sm text-body-sm text-surface-variant/40">© 2024 Ekagrah Seva Foundation. All rights reserved.</p>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation for cards
+        const carousel = document.querySelector('.hide-scrollbar');
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        carousel.addEventListener('mousedown', (e) => {
+            isDown = true;
+            carousel.classList.add('active');
+            startX = e.pageX - carousel.offsetLeft;
+            scrollLeft = carousel.scrollLeft;
+        });
+        carousel.addEventListener('mouseleave', () => {
+            isDown = false;
+        });
+        carousel.addEventListener('mouseup', () => {
+            isDown = false;
+        });
+        carousel.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const x = e.pageX - carousel.offsetLeft;
+            const walk = (x - startX) * 2;
+            carousel.scrollLeft = scrollLeft - walk;
+        });
+
+        // Simple visibility observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
