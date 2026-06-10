@@ -46,7 +46,7 @@ export default async function ImpactStoryPage({ params }: ImpactStoryPageProps) 
     <div className="pt-24 pb-16">
       {/* Header */}
       <section className="bg-surface py-12 md:py-20 border-b border-border">
-        <Container maxWidth="md">
+        <Container size="md">
           <Link href="/impact" className="inline-flex items-center gap-2 text-primary hover:text-primary-dark font-medium mb-8 transition-colors">
             <ArrowLeft className="w-4 h-4" /> Back to Impact Stories
           </Link>
@@ -74,7 +74,7 @@ export default async function ImpactStoryPage({ params }: ImpactStoryPageProps) 
 
       {/* Main Content */}
       <section className="py-16 md:py-24">
-        <Container maxWidth="md">
+        <Container size="md">
           <div className="aspect-video w-full bg-primary-100 rounded-2xl overflow-hidden mb-12 flex items-center justify-center relative shadow-md">
             <Image
               src={story.image}
