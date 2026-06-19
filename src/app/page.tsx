@@ -62,7 +62,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-secondary rounded-[10px] border-2 border-foreground shadow-[12px_12px_0px_#141414] translate-x-4 translate-y-4"></div>
             <div className="relative w-full h-full border-2 border-foreground rounded-[10px] overflow-hidden bg-white z-10">
               <Image 
-                src="/images/rural_medical_camp_1781108002002.png" 
+                src="/images/programs/swasthya-sathi.png" 
                 alt="Medical Camp in Rural India" 
                 fill 
                 className="object-cover"
@@ -221,7 +221,7 @@ export default function Home() {
             <AnimateOnScroll delay={0.1} direction="up">
               <BrutalistCard hoverEffect className="flex flex-col h-full">
                 <div className="relative h-64 border-b-2 border-foreground">
-                  <Image src="/images/food_distribution_1781108013811.png" alt="Food Distribution" fill className="object-cover" />
+                  <Image src="/images/programs/samudayik-vikas.png" alt="Food Distribution" fill className="object-cover" />
                   <div className="absolute top-4 right-4 bg-secondary text-foreground font-bold px-3 py-1 border-2 border-foreground rounded-full text-xs shadow-[0px_2px_0px_#141414]">
                     Urgent
                   </div>
@@ -249,7 +249,7 @@ export default function Home() {
             <AnimateOnScroll delay={0.2} direction="up">
               <BrutalistCard hoverEffect className="flex flex-col h-full">
                 <div className="relative h-64 border-b-2 border-foreground">
-                  <Image src="/images/education_children_1781108026680.png" alt="Education" fill className="object-cover" />
+                  <Image src="/images/stories/education-ravi.png" alt="Education" fill className="object-cover" />
                 </div>
                 <div className="p-6 flex flex-col flex-1">
                   <h3 className="font-heading text-2xl font-bold mb-2">Child Education Fund</h3>
