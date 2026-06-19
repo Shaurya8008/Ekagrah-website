@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
+import { BrutalistCard } from "@/components/ui/BrutalistCard";
 import { Button } from "@/components/ui/Button";
 import { programs } from "@/data/programs";
 import { HeartPulse, BookOpen, Sparkles, Building, Leaf, CheckCircle2 } from "lucide-react";

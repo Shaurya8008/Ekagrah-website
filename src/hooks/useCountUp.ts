@@ -20,7 +20,8 @@ export function useCountUp(options: UseCountUpOptions): number {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (mediaQuery.matches) {
       if (shouldStart) {
-        setCount(end);
+        const timer = setTimeout(() => setCount(end), 0);
+        return () => clearTimeout(timer);
       }
       return;
     }

@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { programs } from "@/data/programs";
 import { HeartPulse, BookOpen, Sparkles, Building, Leaf, CheckCircle2, MapPin, ArrowLeft } from "lucide-react";

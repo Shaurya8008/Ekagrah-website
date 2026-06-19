@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import logoImg from "../../../public/logo.png";
 import { usePathname } from "next/navigation";
 import { Menu, X, Heart, ChevronDown } from "lucide-react";
@@ -26,7 +25,10 @@ export function Navbar() {
 
   // Close mobile menu on route change
   useEffect(() => {
-    setIsMobileMenuOpen(false);
+    const timer = setTimeout(() => {
+      setIsMobileMenuOpen(false);
+    }, 0);
+    return () => clearTimeout(timer);
   }, [pathname]);
 
   return (

@@ -1,8 +1,7 @@
 import Link from "next/link";
-import Image from "next/image";
 import logoImg from "../../../public/logo.png";
 import { Heart, Mail, MapPin, Phone, ArrowRight } from "lucide-react";
-import { NAV_ITEMS, ROUTES, SOCIAL_LINKS } from "@/lib/constants";
+import { NAV_ITEMS, SOCIAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/data/site-config";
 import { Container } from "@/components/ui/Container";
 

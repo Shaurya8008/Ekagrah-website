@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 export function WhatsAppButton() {
   const [show, setShow] = useState(false);

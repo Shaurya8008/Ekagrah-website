@@ -21,8 +21,8 @@ export function useInView(options: UseInViewOptions = {}) {
     // Respect prefers-reduced-motion: skip animation, treat as always in view
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     if (mediaQuery.matches) {
-      setIsInView(true);
-      return;
+      const timer = setTimeout(() => setIsInView(true), 0);
+      return () => clearTimeout(timer);
     }
 
     const element = ref.current;

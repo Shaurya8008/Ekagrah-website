@@ -1,5 +1,5 @@
 import { db } from './config';
-import { collection, doc, getDoc, getDocs, query, where, orderBy, addDoc } from 'firebase/firestore';
+import { collection, getDocs, query, where, orderBy } from 'firebase/firestore';
 
 export interface Campaign {
   id: string;

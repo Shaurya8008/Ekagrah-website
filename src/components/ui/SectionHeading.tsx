@@ -22,7 +22,7 @@ export function SectionHeading({
 
   return (
     <div
-      ref={ref as any}
+      ref={ref as React.Ref<HTMLDivElement>}
       className={cn(
         "flex flex-col gap-4 reveal",
         isInView && "visible",

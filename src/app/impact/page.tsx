@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Card } from "@/components/ui/Card";
+import { BrutalistCard } from "@/components/ui/BrutalistCard";
 import { impactStories } from "@/data/impact-stories";
 import { formatDate } from "@/lib/utils";
 import { ArrowRight, Calendar } from "lucide-react";
@@ -86,7 +86,7 @@ export default function ImpactPage() {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {otherStories.map((story, index) => (
-                <Card key={story.id} padding="none" className={`reveal-fade stagger-${(index % 3) + 1}`}>
+                <BrutalistCard key={story.id} className={`reveal-fade flex flex-col p-0 overflow-hidden stagger-${(index % 3) + 1}`}>
                   <div className="h-48 bg-primary-50 relative overflow-hidden">
                     <Image
                       src={story.image}
@@ -119,7 +119,7 @@ export default function ImpactPage() {
                       </Link>
                     </div>
                   </div>
-                </Card>
+                </BrutalistCard>
               ))}
             </div>
           </div>
