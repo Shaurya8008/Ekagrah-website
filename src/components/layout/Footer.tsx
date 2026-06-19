@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "../../../public/logo.png";
 import { Heart, Mail, MapPin, Phone, ArrowRight } from "lucide-react";
 import { NAV_ITEMS, ROUTES, SOCIAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/data/site-config";
@@ -15,13 +16,13 @@ export function Footer() {
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-teal-800 rounded-full blur-[80px] opacity-50 translate-y-1/3 -translate-x-1/3" />
 
       <Container className="relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-12">
           {/* Brand Col */}
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center group inline-flex">
               <div className="bg-white p-2 rounded-xl">
                 <Image 
-                  src="/logo.png" 
+                  src={logoImg} 
                   alt="Ekagrah Seva Foundation" 
                   width={140} 
                   height={45} 
@@ -68,6 +69,37 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
+                    className="text-primary-100 hover:text-white transition-colors duration-200 text-sm font-medium flex items-center gap-2 group"
+                  >
+                    <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-secondary" />
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal & Policies Col */}
+          <div>
+            <h3 className="font-heading font-semibold text-lg mb-6 text-white flex items-center gap-2">
+              <span className="w-8 h-1 bg-secondary rounded-full" />
+              Legal & Policies
+            </h3>
+            <ul className="flex flex-col gap-3">
+              {[
+                { label: 'Privacy Policy', href: '/privacy-policy' },
+                { label: 'Terms & Conditions', href: '/terms-and-conditions' },
+                { label: 'Cancellation Policy', href: '/cancellation-policy' },
+                { label: 'Refund Policy', href: '/refund-policy' },
+                { label: 'Return Policy', href: '/return-policy' },
+                { label: 'FAQ', href: '/faq' },
+                { label: 'About Us Document', href: '/documents/Ekagrah_Section_C_About_Us.pdf', external: true },
+                { label: 'Branding Details', href: '/documents/Ekagrah_Section_B_Branding_Details.pdf', external: true },
+              ].map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                     className="text-primary-100 hover:text-white transition-colors duration-200 text-sm font-medium flex items-center gap-2 group"
                   >
                     <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-secondary" />

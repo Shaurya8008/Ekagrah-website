@@ -1,8 +1,9 @@
-"use client";
+     "use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import logoImg from "../../../public/logo.png";
 import { usePathname } from "next/navigation";
 import { Menu, X, Heart, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -42,7 +43,7 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex items-center group">
             <Image 
-              src="/logo.png" 
+              src={logoImg} 
               alt="Ekagrah Seva Foundation" 
               width={160} 
               height={50} 
