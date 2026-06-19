@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { team } from "@/data/team";
 import { milestones } from "@/data/milestones";
 import { Heart, Building2, Target, Users, Shield } from "lucide-react";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "About Us",
@@ -43,7 +44,7 @@ export default function AboutPage() {
               </div>
               <h3 className="font-heading text-3xl font-bold text-foreground mb-4">Our Mission</h3>
               <p className="font-body text-lg text-foreground-muted leading-relaxed">
-                To empower underserved and vulnerable communities in rural and semi-urban Varanasi through targeted interventions in education, healthcare, women’s empowerment, and environmental sustainability, fostering self-reliance and inclusive growth.
+                To create sustainable social impact through transparent, accountable, and community-focused initiatives that improve lives and strengthen communities.
               </p>
             </div>
             <div className="bg-secondary-light rounded-2xl p-10 border border-secondary/10 reveal-right">
@@ -52,8 +53,79 @@ export default function AboutPage() {
               </div>
               <h3 className="font-heading text-3xl font-bold text-foreground mb-4">Our Vision</h3>
               <p className="font-body text-lg text-foreground-muted leading-relaxed">
-                We envision a society where every individual, regardless of their socioeconomic background, has equitable access to quality education, essential healthcare, and opportunities for dignified livelihood, creating a resilient and self-sustaining community.
+                To build a compassionate and empowered society where every individual has access to opportunities, dignity, and a better future.
               </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* About Us & Our Story */}
+      <section className="py-20 bg-surface border-b border-border">
+        <Container>
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="reveal-scale">
+              <h3 className="font-heading text-3xl font-bold text-foreground mb-4 text-center">About Us</h3>
+              <p className="font-body text-lg text-foreground-muted leading-relaxed mb-4">
+                Ekagrah Seva Foundation is a Section 8 non-profit organization committed to creating meaningful social impact through transparent and community-driven initiatives. We work towards supporting underserved communities by addressing essential needs such as education, nutrition, hygiene, environmental sustainability, and community welfare.
+              </p>
+              <p className="font-body text-lg text-foreground-muted leading-relaxed">
+                Through the collective efforts of donors, volunteers, and supporters, the foundation strives to create positive and lasting change while promoting dignity, equality, and opportunity for all.
+              </p>
+            </div>
+            <div className="reveal-scale">
+              <h3 className="font-heading text-3xl font-bold text-foreground mb-4 text-center">Our Story</h3>
+              <p className="font-body text-lg text-foreground-muted leading-relaxed mb-4">
+                Ekagrah Seva Foundation was established with the belief that meaningful change begins with collective responsibility and consistent action. The foundation was created to serve as a transparent and trustworthy platform where individuals can contribute towards causes that create real impact in society.
+              </p>
+              <p className="font-body text-lg text-foreground-muted leading-relaxed">
+                By connecting people with meaningful social initiatives, the organization aims to strengthen communities and support those who need it most.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Founder's Message */}
+      <section className="py-20 bg-primary-50">
+        <Container>
+          <div className="max-w-3xl mx-auto bg-white rounded-2xl p-10 border border-primary/10 shadow-lg reveal-scale">
+            <h3 className="font-heading text-3xl font-bold text-foreground mb-6 text-center">Founder&apos;s Message</h3>
+            <div className="space-y-4 font-body text-lg text-foreground-muted leading-relaxed">
+              <p>At Ekagrah Seva Foundation, we believe that meaningful change begins with empathy, responsibility, and collective action.</p>
+              <p>Our vision is to contribute towards a society where every individual has access to opportunities, dignity, and support when needed. Through our initiatives, we strive to address important social challenges while creating sustainable impact at the community level.</p>
+              <p>One of our strongest commitments is maintaining 100% transparency in everything we do. We believe that trust is the foundation of social impact, and every contribution received is managed with accountability and responsibility.</p>
+              <p>I sincerely thank every donor, volunteer, supporter, and well-wisher who has chosen to be part of this journey. Together, we can continue creating positive change and building stronger communities for a better future.</p>
+            </div>
+            <div className="mt-8 pt-6 border-t border-border">
+              <h4 className="font-heading text-xl font-bold text-foreground">Nishant Singh</h4>
+              <p className="font-heading text-sm text-secondary font-medium">Founder & CEO</p>
+              <p className="font-heading text-sm text-foreground-muted">Ekagrah Seva Foundation</p>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* 100% Transparency Commitment */}
+      <section className="py-20 bg-surface">
+        <Container>
+          <div className="max-w-4xl mx-auto text-center reveal-scale">
+            <div className="inline-flex items-center justify-center w-16 h-16 bg-success/10 text-success rounded-full mb-6">
+              <Shield className="w-8 h-8" />
+            </div>
+            <h3 className="font-heading text-3xl font-bold text-foreground mb-6">100% Transparency Commitment</h3>
+            <p className="font-body text-lg text-foreground-muted leading-relaxed mb-8">
+              We are committed to ensuring that every contribution is utilized responsibly and reaches its intended purpose with complete transparency and accountability.
+            </p>
+            <div className="bg-white rounded-xl p-8 border border-border shadow-sm inline-block text-left">
+              <h4 className="font-heading text-xl font-bold text-foreground mb-4">Every donor receives:</h4>
+              <ul className="space-y-3 font-body text-foreground-muted">
+                <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-primary" /> Donation Receipt</li>
+                <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-primary" /> Donation Certificate</li>
+                <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-primary" /> Activity Photographs</li>
+                <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-primary" /> Activity Videos</li>
+                <li className="flex items-center gap-3"><div className="w-2 h-2 rounded-full bg-primary" /> Impact Updates</li>
+              </ul>
             </div>
           </div>
         </Container>
@@ -114,10 +186,18 @@ export default function AboutPage() {
             {team.map((member) => (
               <div key={member.id} className="bg-surface rounded-xl overflow-hidden border border-border shadow-card reveal-scale group">
                 <div className="h-64 bg-primary-100 relative">
-                  {/* Image Placeholder */}
-                  <div className="absolute inset-0 flex items-center justify-center text-primary/30">
-                    <Users className="w-20 h-20" />
-                  </div>
+                  {member.image ? (
+                    <Image 
+                      src={member.image} 
+                      alt={member.name} 
+                      fill 
+                      className="object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 flex items-center justify-center text-primary/30">
+                      <Users className="w-20 h-20" />
+                    </div>
+                  )}
                 </div>
                 <div className="p-6 text-center">
                   <h4 className="font-heading text-xl font-bold text-foreground mb-1">

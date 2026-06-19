@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/Card";
 import { Button } from "@/components/ui/Button";
 import { programs } from "@/data/programs";
 import { HeartPulse, BookOpen, Sparkles, Building, Leaf, CheckCircle2 } from "lucide-react";
-
+import Image from "next/image";
 export const metadata: Metadata = {
   title: "Our Programs",
   description: "Explore Ekagrah Seva Foundation's key initiatives in education, healthcare, women empowerment, community development, and environment.",
@@ -48,10 +48,18 @@ export default function ProgramsPage() {
                 {/* Image Side */}
                 <div className={`relative reveal-scale ${index % 2 === 1 ? "lg:order-2" : ""}`}>
                   <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-primary-100 shadow-elevated relative">
-                    {/* Placeholder */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      {iconMap[program.icon] || <BookOpen className="w-24 h-24 text-primary/20" />}
-                    </div>
+                    {program.image ? (
+                      <Image 
+                        src={program.image} 
+                        alt={program.title} 
+                        fill 
+                        className="object-cover" 
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        {iconMap[program.icon] || <BookOpen className="w-24 h-24 text-primary/20" />}
+                      </div>
+                    )}
                   </div>
                   {/* Floating Icon Badge */}
                   <div className="absolute -bottom-6 -right-6 lg:-right-8 lg:-bottom-8 w-24 h-24 bg-secondary rounded-2xl flex items-center justify-center shadow-lg transform rotate-3">

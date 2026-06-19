@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, Suspense, FormEvent } from "react";
+import { useState, Suspense, FormEvent, useRef } from "react";
 import { Container } from "@/components/ui/Container";
+import { Certificate } from "@/components/ui/Certificate";
 import { Button } from "@/components/ui/Button";
 import { BrutalistCard } from "@/components/ui/BrutalistCard";
 import { ShieldCheck, Heart, ArrowRight, CheckCircle2 } from "lucide-react";
@@ -86,28 +87,80 @@ function DonateForm() {
     }
   };
 
+  const [isGenerating, setIsGenerating] = useState(false);
+  const certificateRef = useRef<HTMLDivElement>(null);
+
+  const handleDownloadCertificate = async () => {
+    if (!certificateRef.current) return;
+    setIsGenerating(true);
+    
+    try {
+      const html2canvas = (await import('html2canvas')).default;
+      const { jsPDF } = await import('jspdf');
+      
+      const canvas = await html2canvas(certificateRef.current, {
+        scale: 2, // Higher quality
+        useCORS: true,
+        backgroundColor: '#ffffff'
+      });
+      
+      const imgData = canvas.toDataURL('image/jpeg', 1.0);
+      const pdf = new jsPDF({
+        orientation: 'landscape',
+        unit: 'px',
+        format: [800, 600]
+      });
+      
+      pdf.addImage(imgData, 'JPEG', 0, 0, 800, 600);
+      pdf.save(`Ekagrah_Certificate_${formData.fullName.replace(/\\s+/g, '_')}.pdf`);
+    } catch (err) {
+      console.error('Error generating certificate:', err);
+      alert('Failed to generate certificate. Please try again.');
+    } finally {
+      setIsGenerating(false);
+    }
+  };
+
   if (success) {
     return (
-      <BrutalistCard className="bg-white p-12 text-center border-4 h-full flex flex-col justify-center">
-        <motion.div 
-          initial={{ scale: 0 }} 
-          animate={{ scale: 1 }} 
-          className="w-24 h-24 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-[4px_4px_0px_#141414]"
-        >
-          <CheckCircle2 className="w-12 h-12" />
-        </motion.div>
-        <h2 className="font-heading text-4xl font-black mb-4">Thank You, {formData.fullName}!</h2>
-        <p className="text-xl font-bold text-foreground-muted mb-8 max-w-lg mx-auto">
-          {donationType === "monthly" 
-            ? "Your monthly subscription has been successfully set up. This reliable support means the world to us."
-            : donationType === "product"
-            ? `Your contribution of ${formData.kitQuantity} kit(s) will directly impact families in need.`
-            : "Your generous donation has been received. We will email your 80G tax exemption receipt shortly."}
-        </p>
-        <div className="flex justify-center">
-            <Button onClick={() => setSuccess(false)} variant="outline">Make Another Donation</Button>
+      <div className="flex flex-col gap-8 w-full max-w-4xl mx-auto">
+        <BrutalistCard className="bg-white p-12 text-center border-4 flex flex-col justify-center">
+          <motion.div 
+            initial={{ scale: 0 }} 
+            animate={{ scale: 1 }} 
+            className="w-24 h-24 bg-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 shadow-[4px_4px_0px_#141414]"
+          >
+            <CheckCircle2 className="w-12 h-12" />
+          </motion.div>
+          <h2 className="font-heading text-4xl font-black mb-4">Thank You, {formData.fullName}!</h2>
+          <p className="text-xl font-bold text-foreground-muted mb-8 max-w-lg mx-auto">
+            {donationType === "monthly" 
+              ? "Your monthly subscription has been successfully set up. This reliable support means the world to us."
+              : donationType === "product"
+              ? `Your contribution of ${formData.kitQuantity} kit(s) will directly impact families in need.`
+              : "Your generous donation has been received. We will email your 80G tax exemption receipt shortly."}
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <Button onClick={handleDownloadCertificate} variant="primary" loading={isGenerating}>
+              Download Certificate
+            </Button>
+            <Button onClick={() => setSuccess(false)} variant="outline">
+              Make Another Donation
+            </Button>
+          </div>
+        </BrutalistCard>
+
+        {/* Hidden Certificate for Rendering */}
+        <div className="absolute top-[-9999px] left-[-9999px]">
+          <div ref={certificateRef}>
+            <Certificate 
+              name={formData.fullName} 
+              amount={calculateTotal()} 
+              date={new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' })} 
+            />
+          </div>
         </div>
-      </BrutalistCard>
+      </div>
     );
   }
 

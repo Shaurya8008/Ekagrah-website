@@ -4,10 +4,11 @@ export const siteConfig: SiteConfig = {
   name: 'Ekagrah Seva Foundation',
   tagline: 'Focused Service for Sustainable Social Impact',
   email: 'ekagrahfoundation@gmail.com',
+  phone: '+91 95598 50029',
   address: {
     line1: 'C/O Rakesh Kumar Singh',
     line2: 'Dindaspur, Jansa Bazar',
-    city: 'Varanasi, Pindra',
+    city: 'Pindra, Varanasi',
     state: 'Uttar Pradesh',
     pin: '221405',
     country: 'India',

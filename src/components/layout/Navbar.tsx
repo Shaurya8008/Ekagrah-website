@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X, Heart, ChevronDown } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -39,18 +40,16 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-white font-heading font-bold text-xl group-hover:scale-105 transition-transform duration-300">
-              E
-            </div>
-            <div className="flex flex-col">
-              <span className="font-heading font-bold text-xl leading-none text-foreground group-hover:text-primary transition-colors duration-300">
-                Ekagrah Seva
-              </span>
-              <span className="font-accent text-secondary text-sm leading-none mt-1">
-                Foundation
-              </span>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <Image 
+              src="/logo.png" 
+              alt="Ekagrah Seva Foundation" 
+              width={160} 
+              height={50} 
+              className="object-contain group-hover:scale-105 transition-transform duration-300"
+              priority
+              unoptimized={true}
+            />
           </Link>
 
           {/* Desktop Nav */}

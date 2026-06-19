@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Heart, Mail, MapPin, Phone, ArrowRight } from "lucide-react";
 import { NAV_ITEMS, ROUTES, SOCIAL_LINKS } from "@/lib/constants";
 import { siteConfig } from "@/data/site-config";
@@ -17,17 +18,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8 mb-12">
           {/* Brand Col */}
           <div className="flex flex-col gap-6">
-            <Link href="/" className="flex items-center gap-2 group inline-flex">
-              <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center text-primary font-heading font-bold text-xl">
-                E
-              </div>
-              <div className="flex flex-col">
-                <span className="font-heading font-bold text-xl leading-none text-white">
-                  Ekagrah Seva
-                </span>
-                <span className="font-accent text-primary-light text-sm leading-none mt-1">
-                  Foundation
-                </span>
+            <Link href="/" className="flex items-center group inline-flex">
+              <div className="bg-white p-2 rounded-xl">
+                <Image 
+                  src="/logo.png" 
+                  alt="Ekagrah Seva Foundation" 
+                  width={140} 
+                  height={45} 
+                  className="object-contain"
+                  unoptimized={true}
+                />
               </div>
             </Link>
             <p className="text-primary-100 font-body text-sm leading-relaxed max-w-sm">

@@ -5,14 +5,14 @@
 
 /* ===== TAILWIND THEME TOKENS ===== */
 @theme inline {
-  /* Colors - True Hope Neobrutalist Theme */
-  --color-primary: #F04951;
-  --color-primary-dark: #d63f46;
-  --color-primary-light: #f8b4b7;
-  --color-primary-50: #feecee;
-  --color-secondary: #FFAC00;
-  --color-secondary-light: #ffe5b3;
-  --color-accent: #FFAC00;
+  /* Colors - Branding Guidelines */
+  --color-primary: #f97316; /* Orange */
+  --color-primary-dark: #ea580c;
+  --color-primary-light: #fdba74;
+  --color-primary-50: #fff7ed;
+  --color-secondary: #ffffff; /* White */
+  --color-secondary-light: #f9fafb;
+  --color-accent: #374151; /* Dark Grey */
   --color-background: #ffffff;
   --color-surface: #ffffff;
   --color-foreground: #1D1D1B;

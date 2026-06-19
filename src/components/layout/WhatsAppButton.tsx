@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function WhatsAppButton() {
   const [show, setShow] = useState(false);
-  const phoneNumber = "919876543210"; // Placeholder, replace with actual
+  const phoneNumber = "919559850029"; // Actual WhatsApp Number
   const message = "Hi Ekagrah Foundation, I'd like to know more about your campaigns.";
 
   useEffect(() => {
