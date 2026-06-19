@@ -21,11 +21,10 @@ export function Footer() {
           <div className="flex flex-col gap-6">
             <Link href="/" className="flex items-center group inline-flex">
               <div className="bg-white p-2 rounded-xl">
-                <Image 
-                  src={logoImg} 
+                <img 
+                  src={logoImg.src} 
                   alt="Ekagrah Seva Foundation" 
-                  className="w-auto h-12 max-w-[180px] object-contain"
-                  unoptimized={true}
+                  className="h-12 w-auto object-contain max-w-[180px]"
                 />
               </div>
             </Link>

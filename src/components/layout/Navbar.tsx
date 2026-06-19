@@ -42,12 +42,10 @@ export function Navbar() {
         <div className="flex justify-between items-center">
           {/* Logo */}
           <Link href="/" className="flex items-center group">
-            <Image 
-              src={logoImg} 
+            <img 
+              src={logoImg.src} 
               alt="Ekagrah Seva Foundation" 
-              className="w-auto h-12 md:h-14 max-w-[200px] object-contain group-hover:scale-105 transition-transform duration-300"
-              priority
-              unoptimized={true}
+              className="h-12 md:h-16 w-auto object-contain max-w-[200px] mix-blend-multiply group-hover:scale-105 transition-transform duration-300"
             />
           </Link>
 
