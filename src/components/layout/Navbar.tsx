@@ -45,9 +45,7 @@ export function Navbar() {
             <Image 
               src={logoImg} 
               alt="Ekagrah Seva Foundation" 
-              width={160} 
-              height={50} 
-              className="object-contain group-hover:scale-105 transition-transform duration-300"
+              className="w-auto h-12 md:h-14 max-w-[200px] object-contain group-hover:scale-105 transition-transform duration-300"
               priority
               unoptimized={true}
             />

@@ -24,9 +24,7 @@ export function Footer() {
                 <Image 
                   src={logoImg} 
                   alt="Ekagrah Seva Foundation" 
-                  width={140} 
-                  height={45} 
-                  className="object-contain"
+                  className="w-auto h-12 max-w-[180px] object-contain"
                   unoptimized={true}
                 />
               </div>
